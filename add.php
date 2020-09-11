@@ -94,16 +94,12 @@ function validate_position(){
 
                         //Now need to execute the operation
                         $rank++;
-                     //   $insert->execute();
+                        $insert->execute();
 
                     }
-                    if($insert->execute()){
-                        $_SESSION['profile_addition'] = 'Profile added';
-                        header("location:index.php");
-                    }
-                    else{
-                        print_r($insert->errorInfo());
-                    }
+                $_SESSION['profile_addition'] = 'Profile added';
+                header("location:index.php");
+
 
 
 
